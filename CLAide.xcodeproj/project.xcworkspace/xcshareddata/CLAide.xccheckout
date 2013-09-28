@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>BA2CD42D-0C9A-4ADD-9D7F-7695D8708C53</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CLAide</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>21288E13-CA7B-470B-B558-AC48E8257DED</key>
+		<string>https://github.com/hborders/CLAide</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CLAide/CLAide.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>21288E13-CA7B-470B-B558-AC48E8257DED</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/hborders/CLAide</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>21288E13-CA7B-470B-B558-AC48E8257DED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>21288E13-CA7B-470B-B558-AC48E8257DED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CLAide</string>
+		</dict>
+	</array>
+</dict>
+</plist>
