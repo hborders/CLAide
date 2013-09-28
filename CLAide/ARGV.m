@@ -35,4 +35,9 @@
     return remainder;
 }
 
+- (void)shiftArgument {
+    self.objects = [self.objects subarrayWithRange:NSMakeRange(1,
+                                                               [self.objects count] - 1)];
+}
+
 @end

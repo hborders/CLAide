@@ -32,6 +32,18 @@
                                              ]), @"");
 }
 
+- (void)testOnlyRemovesOneEntryWhenCallingShiftArgument {
+    ARGV *argv = [[ARGV alloc] initWithObjects:(@[
+                                                  @"ARG",
+                                                  @"ARG",
+                                                  ])];
+    [argv shiftArgument];
+    
+    XCTAssertEqualObjects(argv.remainder, (@[
+                                             @"ARG",
+                                             ]), @"");
+}
+
 @end
 
 @implementation ARGV_TestsStubString {

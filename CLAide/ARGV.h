@@ -14,4 +14,6 @@
 
 - (instancetype)initWithObjects:(NSArray *)objects;
 
+- (void)shiftArgument;
+
 @end
