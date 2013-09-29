@@ -11,6 +11,7 @@
 @interface ARGV : NSObject
 
 @property (nonatomic, readonly) NSArray *remainder;
+@property (nonatomic, readonly) NSDictionary *options;
 
 - (instancetype)initWithObjects:(NSArray *)objects;
 

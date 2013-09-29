@@ -22,26 +22,56 @@
 @implementation ARGV_Tests
 
 - (void)testConvertsObjectsIntoStringsWhileParsing {
-    ARGV *argv = [[ARGV alloc] initWithObjects:(@[
+    ARGV *testObject = [[ARGV alloc] initWithObjects:(@[
                                                   [[ARGV_TestsStubString alloc] initWithDescription:@"--flag"],
                                                   [[ARGV_TestsStubString alloc] initWithDescription:@"ARG"],
                                                   ])];
-    XCTAssertEqualObjects(argv.remainder, (@[
+    XCTAssertEqualObjects(testObject.remainder, (@[
                                              @"--flag",
                                              @"ARG",
                                              ]), @"");
 }
 
 - (void)testOnlyRemovesOneEntryWhenCallingShiftArgument {
-    ARGV *argv = [[ARGV alloc] initWithObjects:(@[
+    ARGV *testObject = [[ARGV alloc] initWithObjects:(@[
                                                   @"ARG",
                                                   @"ARG",
                                                   ])];
-    [argv shiftArgument];
+    [testObject shiftArgument];
     
-    XCTAssertEqualObjects(argv.remainder, (@[
+    XCTAssertEqualObjects(testObject.remainder, (@[
                                              @"ARG",
                                              ]), @"");
+}
+
+@end
+
+@interface ARGV_Complex_Tests : XCTestCase {
+    ARGV *testObject;
+}
+
+@end
+
+@implementation ARGV_Complex_Tests
+
+- (void)setUp {
+    [super setUp];
+    
+    testObject = [[ARGV alloc] initWithObjects:(@[
+                                                  @"--flag",
+                                                  @"--option=VALUE",
+                                                  @"ARG1",
+                                                  @"ARG2",
+                                                  @"--no-other-flag",
+                                                  ])];
+}
+
+- (void)testReturnsTheOptionsAsAHash {
+    XCTAssertEqualObjects(testObject.options, (@{
+                                                 @"flag" : @YES,
+                                                 @"other-flag" : @NO,
+                                                 @"option" : @"VALUE",
+                                                 }), @"");
 }
 
 @end

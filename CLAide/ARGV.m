@@ -35,6 +35,10 @@
     return remainder;
 }
 
+- (NSDictionary *)options {
+    return nil;
+}
+
 - (void)shiftArgument {
     self.objects = [self.objects subarrayWithRange:NSMakeRange(1,
                                                                [self.objects count] - 1)];
